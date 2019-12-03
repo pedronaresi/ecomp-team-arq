@@ -1,0 +1,67 @@
+Quartus Prime Archive log --	C:/processadorGit/Processador.qarlog
+
+Archive:	C:/processadorGit/Processador.qar
+Date:		Thu Jan 03 20:47:31 2019
+Quartus Prime		18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/processadorGit/Add.v
+C:/processadorGit/BCD2.v
+C:/processadorGit/BCD4.v
+C:/processadorGit/BCD4W.vwf
+C:/processadorGit/BCD8.v
+C:/processadorGit/BancoReg.v
+C:/processadorGit/BancoRegW.vwf
+C:/processadorGit/Controle.v
+C:/processadorGit/DeBounce.v
+C:/processadorGit/DiscoRigido.v
+C:/processadorGit/Display7seg.v
+C:/processadorGit/ExtSinal.v
+C:/processadorGit/ExtSinal26.v
+C:/processadorGit/ExtSinalW.vwf
+C:/processadorGit/ExtSinalW2.vwf
+C:/processadorGit/IO.v
+C:/processadorGit/IOW.vwf
+C:/processadorGit/IOW2.vwf
+C:/processadorGit/LCD.v
+C:/processadorGit/LCD_Display.v
+C:/processadorGit/LCD_display_string.v
+C:/processadorGit/MemDados.v
+C:/processadorGit/MemDadosW.vwf
+C:/processadorGit/MemInst.v
+C:/processadorGit/Mux1.v
+C:/processadorGit/Mux2.v
+C:/processadorGit/Mux3.v
+C:/processadorGit/Mux4.v
+C:/processadorGit/Mux5.v
+C:/processadorGit/PC.v
+C:/processadorGit/Processador.qpf
+C:/processadorGit/Processador.qsf
+C:/processadorGit/Processador.v
+C:/processadorGit/ProcessadorCompletoW.vwf
+C:/processadorGit/ProcessadorW.vwf
+C:/processadorGit/ProcessadorW2.vwf
+C:/processadorGit/ProcessadorW3.vwf
+C:/processadorGit/Processador_assignment_defaults.qdf
+C:/processadorGit/Reset_Delay.v
+C:/processadorGit/TESTE.vwf
+C:/processadorGit/TabArquivos.v
+C:/processadorGit/UCW.vwf
+C:/processadorGit/UCWTotal.vwf
+C:/processadorGit/ULA.v
+C:/processadorGit/ULAW.vwf
+C:/processadorGit/bios.v
+C:/processadorGit/debounce2.v
+C:/processadorGit/final.vwf
+C:/processadorGit/finalso.vwf
+C:/processadorGit/proc.vwf
+C:/processadorGit/proc2.vwf
+C:/processadorGit/temporizador.v
+C:/processadorGit/temporizador_hd.v
+C:/processadorGit/teste2.vwf
+C:/processadorGit/testedenis,.vwf
+C:/processadorGit/timer.v
+	======= Total: 56 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

@@ -1,0 +1,1109 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "04/29/2017 22:34:09"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    MemDados
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module MemDados_vlg_sample_tst(
+	OpIO,
+	clock,
+	dadosEscrita,
+	endereco,
+	sampler_tx
+);
+input  OpIO;
+input  clock;
+input [31:0] dadosEscrita;
+input [31:0] endereco;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(OpIO or clock or dadosEscrita or endereco)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module MemDados_vlg_check_tst (
+	dadosLidos,
+	sampler_rx
+);
+input [31:0] dadosLidos;
+input sampler_rx;
+
+reg [31:0] dadosLidos_expected;
+
+reg [31:0] dadosLidos_prev;
+
+reg [31:0] dadosLidos_expected_prev;
+
+reg [31:0] last_dadosLidos_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:1] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 1'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	dadosLidos_prev = dadosLidos;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	dadosLidos_expected_prev = dadosLidos_expected;
+end
+
+
+// expected dadosLidos[ 31 ]
+initial
+begin
+	dadosLidos_expected[31] = 1'bX;
+end 
+// expected dadosLidos[ 30 ]
+initial
+begin
+	dadosLidos_expected[30] = 1'bX;
+end 
+// expected dadosLidos[ 29 ]
+initial
+begin
+	dadosLidos_expected[29] = 1'bX;
+end 
+// expected dadosLidos[ 28 ]
+initial
+begin
+	dadosLidos_expected[28] = 1'bX;
+end 
+// expected dadosLidos[ 27 ]
+initial
+begin
+	dadosLidos_expected[27] = 1'bX;
+end 
+// expected dadosLidos[ 26 ]
+initial
+begin
+	dadosLidos_expected[26] = 1'bX;
+end 
+// expected dadosLidos[ 25 ]
+initial
+begin
+	dadosLidos_expected[25] = 1'bX;
+end 
+// expected dadosLidos[ 24 ]
+initial
+begin
+	dadosLidos_expected[24] = 1'bX;
+end 
+// expected dadosLidos[ 23 ]
+initial
+begin
+	dadosLidos_expected[23] = 1'bX;
+end 
+// expected dadosLidos[ 22 ]
+initial
+begin
+	dadosLidos_expected[22] = 1'bX;
+end 
+// expected dadosLidos[ 21 ]
+initial
+begin
+	dadosLidos_expected[21] = 1'bX;
+end 
+// expected dadosLidos[ 20 ]
+initial
+begin
+	dadosLidos_expected[20] = 1'bX;
+end 
+// expected dadosLidos[ 19 ]
+initial
+begin
+	dadosLidos_expected[19] = 1'bX;
+end 
+// expected dadosLidos[ 18 ]
+initial
+begin
+	dadosLidos_expected[18] = 1'bX;
+end 
+// expected dadosLidos[ 17 ]
+initial
+begin
+	dadosLidos_expected[17] = 1'bX;
+end 
+// expected dadosLidos[ 16 ]
+initial
+begin
+	dadosLidos_expected[16] = 1'bX;
+end 
+// expected dadosLidos[ 15 ]
+initial
+begin
+	dadosLidos_expected[15] = 1'bX;
+end 
+// expected dadosLidos[ 14 ]
+initial
+begin
+	dadosLidos_expected[14] = 1'bX;
+end 
+// expected dadosLidos[ 13 ]
+initial
+begin
+	dadosLidos_expected[13] = 1'bX;
+end 
+// expected dadosLidos[ 12 ]
+initial
+begin
+	dadosLidos_expected[12] = 1'bX;
+end 
+// expected dadosLidos[ 11 ]
+initial
+begin
+	dadosLidos_expected[11] = 1'bX;
+end 
+// expected dadosLidos[ 10 ]
+initial
+begin
+	dadosLidos_expected[10] = 1'bX;
+end 
+// expected dadosLidos[ 9 ]
+initial
+begin
+	dadosLidos_expected[9] = 1'bX;
+end 
+// expected dadosLidos[ 8 ]
+initial
+begin
+	dadosLidos_expected[8] = 1'bX;
+end 
+// expected dadosLidos[ 7 ]
+initial
+begin
+	dadosLidos_expected[7] = 1'bX;
+end 
+// expected dadosLidos[ 6 ]
+initial
+begin
+	dadosLidos_expected[6] = 1'bX;
+end 
+// expected dadosLidos[ 5 ]
+initial
+begin
+	dadosLidos_expected[5] = 1'bX;
+end 
+// expected dadosLidos[ 4 ]
+initial
+begin
+	dadosLidos_expected[4] = 1'bX;
+end 
+// expected dadosLidos[ 3 ]
+initial
+begin
+	dadosLidos_expected[3] = 1'bX;
+end 
+// expected dadosLidos[ 2 ]
+initial
+begin
+	dadosLidos_expected[2] = 1'bX;
+end 
+// expected dadosLidos[ 1 ]
+initial
+begin
+	dadosLidos_expected[1] = 1'bX;
+end 
+// expected dadosLidos[ 0 ]
+initial
+begin
+	dadosLidos_expected[0] = 1'bX;
+end 
+// generate trigger
+always @(dadosLidos_expected or dadosLidos)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected dadosLidos = %b | ",dadosLidos_expected_prev);
+	$display("| real dadosLidos = %b | ",dadosLidos_prev);
+`endif
+	if (
+		( dadosLidos_expected_prev[0] !== 1'bx ) && ( dadosLidos_prev[0] !== dadosLidos_expected_prev[0] )
+		&& ((dadosLidos_expected_prev[0] !== last_dadosLidos_exp[0]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[0] = dadosLidos_expected_prev[0];
+	end
+	if (
+		( dadosLidos_expected_prev[1] !== 1'bx ) && ( dadosLidos_prev[1] !== dadosLidos_expected_prev[1] )
+		&& ((dadosLidos_expected_prev[1] !== last_dadosLidos_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[1] = dadosLidos_expected_prev[1];
+	end
+	if (
+		( dadosLidos_expected_prev[2] !== 1'bx ) && ( dadosLidos_prev[2] !== dadosLidos_expected_prev[2] )
+		&& ((dadosLidos_expected_prev[2] !== last_dadosLidos_exp[2]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[2] = dadosLidos_expected_prev[2];
+	end
+	if (
+		( dadosLidos_expected_prev[3] !== 1'bx ) && ( dadosLidos_prev[3] !== dadosLidos_expected_prev[3] )
+		&& ((dadosLidos_expected_prev[3] !== last_dadosLidos_exp[3]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[3] = dadosLidos_expected_prev[3];
+	end
+	if (
+		( dadosLidos_expected_prev[4] !== 1'bx ) && ( dadosLidos_prev[4] !== dadosLidos_expected_prev[4] )
+		&& ((dadosLidos_expected_prev[4] !== last_dadosLidos_exp[4]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[4] = dadosLidos_expected_prev[4];
+	end
+	if (
+		( dadosLidos_expected_prev[5] !== 1'bx ) && ( dadosLidos_prev[5] !== dadosLidos_expected_prev[5] )
+		&& ((dadosLidos_expected_prev[5] !== last_dadosLidos_exp[5]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[5] = dadosLidos_expected_prev[5];
+	end
+	if (
+		( dadosLidos_expected_prev[6] !== 1'bx ) && ( dadosLidos_prev[6] !== dadosLidos_expected_prev[6] )
+		&& ((dadosLidos_expected_prev[6] !== last_dadosLidos_exp[6]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[6] = dadosLidos_expected_prev[6];
+	end
+	if (
+		( dadosLidos_expected_prev[7] !== 1'bx ) && ( dadosLidos_prev[7] !== dadosLidos_expected_prev[7] )
+		&& ((dadosLidos_expected_prev[7] !== last_dadosLidos_exp[7]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[7] = dadosLidos_expected_prev[7];
+	end
+	if (
+		( dadosLidos_expected_prev[8] !== 1'bx ) && ( dadosLidos_prev[8] !== dadosLidos_expected_prev[8] )
+		&& ((dadosLidos_expected_prev[8] !== last_dadosLidos_exp[8]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[8] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[8] = dadosLidos_expected_prev[8];
+	end
+	if (
+		( dadosLidos_expected_prev[9] !== 1'bx ) && ( dadosLidos_prev[9] !== dadosLidos_expected_prev[9] )
+		&& ((dadosLidos_expected_prev[9] !== last_dadosLidos_exp[9]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[9] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[9] = dadosLidos_expected_prev[9];
+	end
+	if (
+		( dadosLidos_expected_prev[10] !== 1'bx ) && ( dadosLidos_prev[10] !== dadosLidos_expected_prev[10] )
+		&& ((dadosLidos_expected_prev[10] !== last_dadosLidos_exp[10]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[10] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[10] = dadosLidos_expected_prev[10];
+	end
+	if (
+		( dadosLidos_expected_prev[11] !== 1'bx ) && ( dadosLidos_prev[11] !== dadosLidos_expected_prev[11] )
+		&& ((dadosLidos_expected_prev[11] !== last_dadosLidos_exp[11]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[11] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[11] = dadosLidos_expected_prev[11];
+	end
+	if (
+		( dadosLidos_expected_prev[12] !== 1'bx ) && ( dadosLidos_prev[12] !== dadosLidos_expected_prev[12] )
+		&& ((dadosLidos_expected_prev[12] !== last_dadosLidos_exp[12]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[12] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[12] = dadosLidos_expected_prev[12];
+	end
+	if (
+		( dadosLidos_expected_prev[13] !== 1'bx ) && ( dadosLidos_prev[13] !== dadosLidos_expected_prev[13] )
+		&& ((dadosLidos_expected_prev[13] !== last_dadosLidos_exp[13]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[13] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[13] = dadosLidos_expected_prev[13];
+	end
+	if (
+		( dadosLidos_expected_prev[14] !== 1'bx ) && ( dadosLidos_prev[14] !== dadosLidos_expected_prev[14] )
+		&& ((dadosLidos_expected_prev[14] !== last_dadosLidos_exp[14]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[14] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[14] = dadosLidos_expected_prev[14];
+	end
+	if (
+		( dadosLidos_expected_prev[15] !== 1'bx ) && ( dadosLidos_prev[15] !== dadosLidos_expected_prev[15] )
+		&& ((dadosLidos_expected_prev[15] !== last_dadosLidos_exp[15]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[15] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[15] = dadosLidos_expected_prev[15];
+	end
+	if (
+		( dadosLidos_expected_prev[16] !== 1'bx ) && ( dadosLidos_prev[16] !== dadosLidos_expected_prev[16] )
+		&& ((dadosLidos_expected_prev[16] !== last_dadosLidos_exp[16]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[16] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[16] = dadosLidos_expected_prev[16];
+	end
+	if (
+		( dadosLidos_expected_prev[17] !== 1'bx ) && ( dadosLidos_prev[17] !== dadosLidos_expected_prev[17] )
+		&& ((dadosLidos_expected_prev[17] !== last_dadosLidos_exp[17]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[17] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[17] = dadosLidos_expected_prev[17];
+	end
+	if (
+		( dadosLidos_expected_prev[18] !== 1'bx ) && ( dadosLidos_prev[18] !== dadosLidos_expected_prev[18] )
+		&& ((dadosLidos_expected_prev[18] !== last_dadosLidos_exp[18]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[18] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[18] = dadosLidos_expected_prev[18];
+	end
+	if (
+		( dadosLidos_expected_prev[19] !== 1'bx ) && ( dadosLidos_prev[19] !== dadosLidos_expected_prev[19] )
+		&& ((dadosLidos_expected_prev[19] !== last_dadosLidos_exp[19]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[19] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[19] = dadosLidos_expected_prev[19];
+	end
+	if (
+		( dadosLidos_expected_prev[20] !== 1'bx ) && ( dadosLidos_prev[20] !== dadosLidos_expected_prev[20] )
+		&& ((dadosLidos_expected_prev[20] !== last_dadosLidos_exp[20]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[20] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[20] = dadosLidos_expected_prev[20];
+	end
+	if (
+		( dadosLidos_expected_prev[21] !== 1'bx ) && ( dadosLidos_prev[21] !== dadosLidos_expected_prev[21] )
+		&& ((dadosLidos_expected_prev[21] !== last_dadosLidos_exp[21]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[21] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[21] = dadosLidos_expected_prev[21];
+	end
+	if (
+		( dadosLidos_expected_prev[22] !== 1'bx ) && ( dadosLidos_prev[22] !== dadosLidos_expected_prev[22] )
+		&& ((dadosLidos_expected_prev[22] !== last_dadosLidos_exp[22]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[22] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[22] = dadosLidos_expected_prev[22];
+	end
+	if (
+		( dadosLidos_expected_prev[23] !== 1'bx ) && ( dadosLidos_prev[23] !== dadosLidos_expected_prev[23] )
+		&& ((dadosLidos_expected_prev[23] !== last_dadosLidos_exp[23]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[23] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[23] = dadosLidos_expected_prev[23];
+	end
+	if (
+		( dadosLidos_expected_prev[24] !== 1'bx ) && ( dadosLidos_prev[24] !== dadosLidos_expected_prev[24] )
+		&& ((dadosLidos_expected_prev[24] !== last_dadosLidos_exp[24]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[24] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[24] = dadosLidos_expected_prev[24];
+	end
+	if (
+		( dadosLidos_expected_prev[25] !== 1'bx ) && ( dadosLidos_prev[25] !== dadosLidos_expected_prev[25] )
+		&& ((dadosLidos_expected_prev[25] !== last_dadosLidos_exp[25]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[25] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[25] = dadosLidos_expected_prev[25];
+	end
+	if (
+		( dadosLidos_expected_prev[26] !== 1'bx ) && ( dadosLidos_prev[26] !== dadosLidos_expected_prev[26] )
+		&& ((dadosLidos_expected_prev[26] !== last_dadosLidos_exp[26]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[26] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[26] = dadosLidos_expected_prev[26];
+	end
+	if (
+		( dadosLidos_expected_prev[27] !== 1'bx ) && ( dadosLidos_prev[27] !== dadosLidos_expected_prev[27] )
+		&& ((dadosLidos_expected_prev[27] !== last_dadosLidos_exp[27]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[27] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[27] = dadosLidos_expected_prev[27];
+	end
+	if (
+		( dadosLidos_expected_prev[28] !== 1'bx ) && ( dadosLidos_prev[28] !== dadosLidos_expected_prev[28] )
+		&& ((dadosLidos_expected_prev[28] !== last_dadosLidos_exp[28]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[28] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[28] = dadosLidos_expected_prev[28];
+	end
+	if (
+		( dadosLidos_expected_prev[29] !== 1'bx ) && ( dadosLidos_prev[29] !== dadosLidos_expected_prev[29] )
+		&& ((dadosLidos_expected_prev[29] !== last_dadosLidos_exp[29]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[29] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[29] = dadosLidos_expected_prev[29];
+	end
+	if (
+		( dadosLidos_expected_prev[30] !== 1'bx ) && ( dadosLidos_prev[30] !== dadosLidos_expected_prev[30] )
+		&& ((dadosLidos_expected_prev[30] !== last_dadosLidos_exp[30]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[30] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[30] = dadosLidos_expected_prev[30];
+	end
+	if (
+		( dadosLidos_expected_prev[31] !== 1'bx ) && ( dadosLidos_prev[31] !== dadosLidos_expected_prev[31] )
+		&& ((dadosLidos_expected_prev[31] !== last_dadosLidos_exp[31]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dadosLidos[31] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dadosLidos_expected_prev);
+		$display ("     Real value = %b", dadosLidos_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dadosLidos_exp[31] = dadosLidos_expected_prev[31];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module MemDados_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg OpIO;
+reg clock;
+reg [31:0] dadosEscrita;
+reg [31:0] endereco;
+// wires                                               
+wire [31:0] dadosLidos;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+MemDados i1 (
+// port map - connection between master ports and signals/registers   
+	.OpIO(OpIO),
+	.clock(clock),
+	.dadosEscrita(dadosEscrita),
+	.dadosLidos(dadosLidos),
+	.endereco(endereco)
+);
+
+// clock
+initial
+begin
+	repeat(12)
+	begin
+		clock = 1'b0;
+		clock = #40000 1'b1;
+		# 40000;
+	end
+	clock = 1'b0;
+end 
+
+// OpIO
+initial
+begin
+	OpIO = 1'b1;
+	OpIO = #190000 1'b0;
+	OpIO = #180000 1'b1;
+	OpIO = #160000 1'b0;
+	OpIO = #150000 1'b1;
+	OpIO = #130000 1'b0;
+end 
+// endereco[ 31 ]
+initial
+begin
+	endereco[31] = 1'b0;
+end 
+// endereco[ 30 ]
+initial
+begin
+	endereco[30] = 1'b0;
+end 
+// endereco[ 29 ]
+initial
+begin
+	endereco[29] = 1'b0;
+end 
+// endereco[ 28 ]
+initial
+begin
+	endereco[28] = 1'b0;
+end 
+// endereco[ 27 ]
+initial
+begin
+	endereco[27] = 1'b0;
+end 
+// endereco[ 26 ]
+initial
+begin
+	endereco[26] = 1'b0;
+end 
+// endereco[ 25 ]
+initial
+begin
+	endereco[25] = 1'b0;
+end 
+// endereco[ 24 ]
+initial
+begin
+	endereco[24] = 1'b0;
+end 
+// endereco[ 23 ]
+initial
+begin
+	endereco[23] = 1'b0;
+end 
+// endereco[ 22 ]
+initial
+begin
+	endereco[22] = 1'b0;
+end 
+// endereco[ 21 ]
+initial
+begin
+	endereco[21] = 1'b0;
+end 
+// endereco[ 20 ]
+initial
+begin
+	endereco[20] = 1'b0;
+end 
+// endereco[ 19 ]
+initial
+begin
+	endereco[19] = 1'b0;
+end 
+// endereco[ 18 ]
+initial
+begin
+	endereco[18] = 1'b0;
+end 
+// endereco[ 17 ]
+initial
+begin
+	endereco[17] = 1'b0;
+end 
+// endereco[ 16 ]
+initial
+begin
+	endereco[16] = 1'b0;
+end 
+// endereco[ 15 ]
+initial
+begin
+	endereco[15] = 1'b0;
+end 
+// endereco[ 14 ]
+initial
+begin
+	endereco[14] = 1'b0;
+end 
+// endereco[ 13 ]
+initial
+begin
+	endereco[13] = 1'b0;
+end 
+// endereco[ 12 ]
+initial
+begin
+	endereco[12] = 1'b0;
+end 
+// endereco[ 11 ]
+initial
+begin
+	endereco[11] = 1'b0;
+end 
+// endereco[ 10 ]
+initial
+begin
+	endereco[10] = 1'b0;
+end 
+// endereco[ 9 ]
+initial
+begin
+	endereco[9] = 1'b0;
+end 
+// endereco[ 8 ]
+initial
+begin
+	endereco[8] = 1'b0;
+end 
+// endereco[ 7 ]
+initial
+begin
+	endereco[7] = 1'b0;
+end 
+// endereco[ 6 ]
+initial
+begin
+	endereco[6] = 1'b0;
+end 
+// endereco[ 5 ]
+initial
+begin
+	endereco[5] = 1'b0;
+end 
+// endereco[ 4 ]
+initial
+begin
+	endereco[4] = 1'b0;
+	endereco[4] = #680000 1'b1;
+end 
+// endereco[ 3 ]
+initial
+begin
+	endereco[3] = 1'b0;
+end 
+// endereco[ 2 ]
+initial
+begin
+	endereco[2] = 1'b0;
+end 
+// endereco[ 1 ]
+initial
+begin
+	endereco[1] = 1'b1;
+	endereco[1] = #680000 1'b0;
+end 
+// endereco[ 0 ]
+initial
+begin
+	endereco[0] = 1'b0;
+	endereco[0] = #370000 1'b1;
+	endereco[0] = #310000 1'b0;
+end 
+// dadosEscrita[ 31 ]
+initial
+begin
+	dadosEscrita[31] = 1'b0;
+end 
+// dadosEscrita[ 30 ]
+initial
+begin
+	dadosEscrita[30] = 1'b0;
+end 
+// dadosEscrita[ 29 ]
+initial
+begin
+	dadosEscrita[29] = 1'b0;
+end 
+// dadosEscrita[ 28 ]
+initial
+begin
+	dadosEscrita[28] = 1'b0;
+end 
+// dadosEscrita[ 27 ]
+initial
+begin
+	dadosEscrita[27] = 1'b0;
+end 
+// dadosEscrita[ 26 ]
+initial
+begin
+	dadosEscrita[26] = 1'b0;
+end 
+// dadosEscrita[ 25 ]
+initial
+begin
+	dadosEscrita[25] = 1'b0;
+end 
+// dadosEscrita[ 24 ]
+initial
+begin
+	dadosEscrita[24] = 1'b0;
+end 
+// dadosEscrita[ 23 ]
+initial
+begin
+	dadosEscrita[23] = 1'b0;
+end 
+// dadosEscrita[ 22 ]
+initial
+begin
+	dadosEscrita[22] = 1'b0;
+end 
+// dadosEscrita[ 21 ]
+initial
+begin
+	dadosEscrita[21] = 1'b0;
+end 
+// dadosEscrita[ 20 ]
+initial
+begin
+	dadosEscrita[20] = 1'b0;
+end 
+// dadosEscrita[ 19 ]
+initial
+begin
+	dadosEscrita[19] = 1'b0;
+end 
+// dadosEscrita[ 18 ]
+initial
+begin
+	dadosEscrita[18] = 1'b0;
+end 
+// dadosEscrita[ 17 ]
+initial
+begin
+	dadosEscrita[17] = 1'b0;
+end 
+// dadosEscrita[ 16 ]
+initial
+begin
+	dadosEscrita[16] = 1'b0;
+end 
+// dadosEscrita[ 15 ]
+initial
+begin
+	dadosEscrita[15] = 1'b0;
+end 
+// dadosEscrita[ 14 ]
+initial
+begin
+	dadosEscrita[14] = 1'b0;
+end 
+// dadosEscrita[ 13 ]
+initial
+begin
+	dadosEscrita[13] = 1'b0;
+end 
+// dadosEscrita[ 12 ]
+initial
+begin
+	dadosEscrita[12] = 1'b0;
+end 
+// dadosEscrita[ 11 ]
+initial
+begin
+	dadosEscrita[11] = 1'b0;
+end 
+// dadosEscrita[ 10 ]
+initial
+begin
+	dadosEscrita[10] = 1'b0;
+end 
+// dadosEscrita[ 9 ]
+initial
+begin
+	dadosEscrita[9] = 1'b0;
+end 
+// dadosEscrita[ 8 ]
+initial
+begin
+	dadosEscrita[8] = 1'b0;
+end 
+// dadosEscrita[ 7 ]
+initial
+begin
+	dadosEscrita[7] = 1'b0;
+end 
+// dadosEscrita[ 6 ]
+initial
+begin
+	dadosEscrita[6] = 1'b0;
+end 
+// dadosEscrita[ 5 ]
+initial
+begin
+	dadosEscrita[5] = 1'b0;
+end 
+// dadosEscrita[ 4 ]
+initial
+begin
+	dadosEscrita[4] = 1'b1;
+	dadosEscrita[4] = #190000 1'b0;
+end 
+// dadosEscrita[ 3 ]
+initial
+begin
+	dadosEscrita[3] = 1'b1;
+	dadosEscrita[3] = #190000 1'b0;
+end 
+// dadosEscrita[ 2 ]
+initial
+begin
+	dadosEscrita[2] = 1'b1;
+	dadosEscrita[2] = #190000 1'b0;
+	dadosEscrita[2] = #180000 1'b1;
+	dadosEscrita[2] = #170000 1'b0;
+	dadosEscrita[2] = #140000 1'b1;
+end 
+// dadosEscrita[ 1 ]
+initial
+begin
+	dadosEscrita[1] = 1'b0;
+	dadosEscrita[1] = #370000 1'b1;
+	dadosEscrita[1] = #170000 1'b0;
+	dadosEscrita[1] = #140000 1'b1;
+end 
+// dadosEscrita[ 0 ]
+initial
+begin
+	dadosEscrita[0] = 1'b0;
+	dadosEscrita[0] = #370000 1'b1;
+	dadosEscrita[0] = #170000 1'b0;
+	dadosEscrita[0] = #140000 1'b1;
+end 
+
+MemDados_vlg_sample_tst tb_sample (
+	.OpIO(OpIO),
+	.clock(clock),
+	.dadosEscrita(dadosEscrita),
+	.endereco(endereco),
+	.sampler_tx(sampler)
+);
+
+MemDados_vlg_check_tst tb_out(
+	.dadosLidos(dadosLidos),
+	.sampler_rx(sampler)
+);
+endmodule
+
