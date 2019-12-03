@@ -1,0 +1,161 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'temporizador:temp|clock'
+Slack : -170.164
+TNS   : -332765.562
+
+Type  : Slow 1200mV 85C Model Setup 'clock_auto'
+Slack : -167.268
+TNS   : -13258.654
+
+Type  : Slow 1200mV 85C Model Setup 'IO:io|LCD:lcd|LCD_Display:u1|CLK_400HZ'
+Slack : -43.556
+TNS   : -329.944
+
+Type  : Slow 1200mV 85C Model Hold 'clock_auto'
+Slack : -2.855
+TNS   : -5.682
+
+Type  : Slow 1200mV 85C Model Hold 'temporizador:temp|clock'
+Slack : 0.101
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'IO:io|LCD:lcd|LCD_Display:u1|CLK_400HZ'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'clock_auto'
+Slack : -5.153
+TNS   : -108.081
+
+Type  : Slow 1200mV 85C Model Recovery 'IO:io|LCD:lcd|LCD_Display:u1|CLK_400HZ'
+Slack : -4.743
+TNS   : -61.615
+
+Type  : Slow 1200mV 85C Model Removal 'IO:io|LCD:lcd|LCD_Display:u1|CLK_400HZ'
+Slack : 4.947
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clock_auto'
+Slack : 5.452
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_auto'
+Slack : -3.000
+TNS   : -1198.941
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'temporizador:temp|clock'
+Slack : -2.693
+TNS   : -10497.894
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'IO:io|LCD:lcd|LCD_Display:u1|CLK_400HZ'
+Slack : -1.285
+TNS   : -48.830
+
+Type  : Slow 1200mV 0C Model Setup 'temporizador:temp|clock'
+Slack : -154.425
+TNS   : -304577.898
+
+Type  : Slow 1200mV 0C Model Setup 'clock_auto'
+Slack : -151.702
+TNS   : -12117.942
+
+Type  : Slow 1200mV 0C Model Setup 'IO:io|LCD:lcd|LCD_Display:u1|CLK_400HZ'
+Slack : -39.682
+TNS   : -297.708
+
+Type  : Slow 1200mV 0C Model Hold 'clock_auto'
+Slack : -2.602
+TNS   : -5.174
+
+Type  : Slow 1200mV 0C Model Hold 'temporizador:temp|clock'
+Slack : 0.099
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'IO:io|LCD:lcd|LCD_Display:u1|CLK_400HZ'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'clock_auto'
+Slack : -4.615
+TNS   : -96.794
+
+Type  : Slow 1200mV 0C Model Recovery 'IO:io|LCD:lcd|LCD_Display:u1|CLK_400HZ'
+Slack : -4.253
+TNS   : -55.270
+
+Type  : Slow 1200mV 0C Model Removal 'IO:io|LCD:lcd|LCD_Display:u1|CLK_400HZ'
+Slack : 4.412
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'clock_auto'
+Slack : 4.863
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_auto'
+Slack : -3.000
+TNS   : -1183.453
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'temporizador:temp|clock'
+Slack : -2.649
+TNS   : -10485.222
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'IO:io|LCD:lcd|LCD_Display:u1|CLK_400HZ'
+Slack : -1.285
+TNS   : -48.830
+
+Type  : Fast 1200mV 0C Model Setup 'temporizador:temp|clock'
+Slack : -85.225
+TNS   : -168303.715
+
+Type  : Fast 1200mV 0C Model Setup 'clock_auto'
+Slack : -83.779
+TNS   : -6635.390
+
+Type  : Fast 1200mV 0C Model Setup 'IO:io|LCD:lcd|LCD_Display:u1|CLK_400HZ'
+Slack : -21.589
+TNS   : -151.232
+
+Type  : Fast 1200mV 0C Model Hold 'clock_auto'
+Slack : -1.561
+TNS   : -3.091
+
+Type  : Fast 1200mV 0C Model Hold 'temporizador:temp|clock'
+Slack : -0.011
+TNS   : -0.011
+
+Type  : Fast 1200mV 0C Model Hold 'IO:io|LCD:lcd|LCD_Display:u1|CLK_400HZ'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'clock_auto'
+Slack : -2.326
+TNS   : -48.769
+
+Type  : Fast 1200mV 0C Model Recovery 'IO:io|LCD:lcd|LCD_Display:u1|CLK_400HZ'
+Slack : -2.175
+TNS   : -28.233
+
+Type  : Fast 1200mV 0C Model Removal 'IO:io|LCD:lcd|LCD_Display:u1|CLK_400HZ'
+Slack : 2.511
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clock_auto'
+Slack : 2.730
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_auto'
+Slack : -3.000
+TNS   : -603.715
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'temporizador:temp|clock'
+Slack : -1.000
+TNS   : -7854.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'IO:io|LCD:lcd|LCD_Display:u1|CLK_400HZ'
+Slack : -1.000
+TNS   : -38.000
+
+------------------------------------------------------------

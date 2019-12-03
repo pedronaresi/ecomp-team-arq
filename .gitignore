@@ -1,0 +1,19 @@
+# Ignore Quartus II generated folders
+src/main/system/C:
+src/main/system/db
+src/main/system/incremental_db
+src/main/system/output_files
+
+# Ignore Quartus II generated files
+*.bak
+*.ddb
+*.inc
+*.qws
+*.rpt
+*.vwf
+
+# VS Code
+.vscode
+
+# Spreadsheets temporary files
+.~lock.*.ods#
